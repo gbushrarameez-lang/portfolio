@@ -1,208 +1,1255 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Bushra Firdous | Senior Software Developer</title>
-
-    <!-- SEO & ATS -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bushra Firdous — Senior Software Engineer</title>
     <meta
       name="description"
-      content="Bushra Firdous – Senior Software Developer with 8+ years of experience in PHP, Laravel, Python, MySQL, REST APIs, and enterprise applications."
+      content="Bushra Firdous — Senior Software Engineer. Backend, Data Engineering, Healthcare integrations, ETL, Laravel, Python, MySQL."
     />
-    <meta
-      name="keywords"
-      content="Senior Software Developer, PHP Developer, Laravel Developer, Python Developer, Full Stack Developer, MySQL, REST API, ATS Friendly Resume"
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
     />
-    <meta name="author" content="Bushra Firdous" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Minimal styling (ATS safe) -->
     <style>
+      :root {
+        --bg: #0b0d10;
+        --card: #0f1116;
+        --muted: #9ca3af;
+        --text: #e6eef8;
+        --primary: #7c7cff;
+        --border: #1f2937;
+        --radius: 12px;
+        --gap: 20px;
+        --container: 1100px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
       body {
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.6;
-        color: #222;
-        margin: 40px;
-        max-width: 900px;
+        height: 100%;
       }
-      h1,
-      h2,
-      h3 {
-        color: #0a4a7a;
-        margin-bottom: 5px;
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial;
+        background: radial-gradient(
+          circle at 10% 0%,
+          #12151c 0%,
+          var(--bg) 60%
+        );
+        color: var(--text);
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
-      h1 {
-        font-size: 28px;
+
+      .container {
+        max-width: var(--container);
+        margin: 32px auto;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
       }
-      h2 {
-        font-size: 20px;
-        border-bottom: 2px solid #ddd;
-        padding-bottom: 4px;
-        margin-top: 30px;
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 4px;
+        gap: 16px;
       }
-      h3 {
-        font-size: 16px;
-        margin-top: 15px;
+
+      .brand {
+        display: flex;
+        gap: 14px;
+        align-items: center;
       }
-      p,
-      li {
-        font-size: 14px;
+
+      .ribbon,
+      .code-ribbon {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, #0f131a, #0b0e14);
+        border: 1px solid var(--border);
+        font-family: ui-monospace, monospace;
+        font-size: 13px;
+        color: #c7d2fe;
       }
-      ul {
+
+      .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--primary);
+        box-shadow: 0 0 8px rgba(124, 124, 255, 0.9);
+      }
+
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
         margin-left: 18px;
-      }
-      .header {
-        margin-bottom: 25px;
-      }
-      .contact {
         font-size: 14px;
       }
-      .section {
-        margin-bottom: 20px;
+      nav a:hover {
+        color: var(--text);
       }
-      .bold {
-        font-weight: bold;
+
+      .hero {
+        margin-bottom: 18px;
+      }
+      .hero h1 {
+        font-size: 40px;
+        margin: 6px 0 6px 0;
+        line-height: 1;
+      }
+      .hero h2 {
+        font-size: 18px;
+        color: var(--primary);
+        font-weight: 600;
+        margin: 0;
+      }
+      .hero p.lead {
+        color: var(--muted);
+        max-width: 820px;
+        margin-top: 12px;
+        font-size: 15px;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+        margin-top: 12px;
+      }
+
+      .buttons {
+        margin-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--text);
+        font-size: 14px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .btn.primary {
+        background: var(--primary);
+        color: #fff;
+        border-color: transparent;
+      }
+
+      section {
+        margin-top: 28px;
+      }
+      h2.section-title {
+        font-size: 20px;
+        margin: 0 0 8px 0;
+        color: var(--text);
+      }
+      h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        color: var(--text);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        background: linear-gradient(180deg, var(--card), #0d0f13);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+      }
+      .card h4 {
+        font-size: 16px;
+        margin: 0;
+      }
+      .meta-line {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      /* preview clamp */
+      .preview {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        color: var(--muted);
+        font-size: 14px;
+        margin-top: 8px;
+      }
+
+      .details {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition:
+          max-height 0.3s ease,
+          opacity 0.2s ease;
+        color: var(--muted);
+        font-size: 14px;
+        margin-top: 6px;
+      }
+      .card.open .details {
+        max-height: 2000px;
+        opacity: 1;
+      }
+
+      .actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .toggle-btn {
+        background: transparent;
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        border-radius: 10px;
+        color: var(--text);
+        cursor: pointer;
+        font-size: 13px;
+      }
+      .toggle-btn:focus {
+        outline: 3px solid rgba(124, 124, 255, 0.16);
+      }
+
+      /* filters */
+      .filters {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 14px;
+        flex-wrap: wrap;
+      }
+      .filter-btn {
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .filter-btn.active {
+        background: var(--primary);
+        color: #fff;
+        border-color: transparent;
+      }
+
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 22px 0;
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 28px;
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--muted);
+        font-size: 12px;
+        margin-right: 6px;
+      }
+
+      @media (max-width: 640px) {
+        .hero h1 {
+          font-size: 28px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      /* ===== Skills Progress Section ===== */
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .skill-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        margin-top: 6px;
+      }
+
+      .skill-row .label {
+        font-weight: 500;
+        color: var(--text);
+      }
+
+      .skill-row .years {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      /* Progress bar container */
+      .bar {
+        width: 100%;
+        height: 8px;
+        background: #111827;
+        border-radius: 999px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+      }
+
+      /* Progress bar fill */
+      .bar span {
+        display: block;
+        height: 100%;
+        width: 0;
+        background: linear-gradient(90deg, var(--primary), #9aa5ff);
+        border-radius: 999px;
+        transition: width 1s ease;
+      }
+
+      /* spacing between skills */
+      .gap {
+        height: 14px;
+      }
+
+      /* Animate on load */
+      .bar span[data-pct] {
+        width: attr(data-pct percentage);
+      }
+
+      /* Fallback for browsers not supporting attr() */
+      .bar span {
+        width: calc(var(--pct, 0) * 1%);
+      }
+
+      /* Mobile */
+      @media (max-width: 720px) {
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
 
   <body>
-    <!-- HEADER -->
-    <header class="header">
-      <h1>Bushra Firdous</h1>
-      <p class="bold">Senior Software Developer | Full Stack Engineer</p>
-      <p class="contact">
-        📧 g.bushrarameez@gmail.com | 📞 +91 7387577720 | 📍 Nagpur, India | 🌐
-        LinkedIn & GitHub available on request
-      </p>
-    </header>
+    <div class="container">
+      <header>
+        <div class="code-ribbon" aria-hidden="false">
+          <span class="dot" aria-hidden="true"></span>
+          <span
+            class="typing"
+            id="typeLine"
+            aria-live="polite"
+            aria-atomic="true"
+          ></span>
+        </div>
 
-    <!-- SUMMARY -->
-    <section class="section">
-      <h2>Professional Summary</h2>
-      <p>
-        Senior Software Developer with over 8 years of experience in IT services
-        and software technologies. Specialized in PHP, Laravel, Python, MySQL,
-        RESTful APIs, and enterprise-grade web applications. Strong background
-        in CRM, ERP, HRMS, surveys, and healthcare systems. Proven ability to
-        design, develop, and maintain scalable applications while collaborating
-        with cross-functional teams in Agile environments.
-      </p>
-    </section>
+        <nav aria-label="Primary">
+          <a href="#summary">Summary</a>
+          <a href="#skills">Skills</a>
+          <a href="#caseMidcost">Case Study</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-    <!-- SKILLS -->
-    <section class="section">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> PHP, Python, JavaScript, TypeScript</li>
-        <li>
-          <strong>Frameworks:</strong> Laravel, CakePHP, CodeIgniter, Next.js
-        </li>
-        <li><strong>Frontend:</strong> HTML5, CSS3, Bootstrap, jQuery, AJAX</li>
-        <li><strong>Databases:</strong> MySQL</li>
-        <li><strong>APIs:</strong> RESTful APIs, JSON</li>
-        <li><strong>Tools:</strong> Git, Jira, VS Code, Sublime Merge</li>
-        <li>
-          <strong>Other:</strong> MVC Architecture, OOP, Cron Jobs, Agile/Scrum
-        </li>
-      </ul>
-    </section>
+      <main>
+        <section class="hero" id="intro" aria-labelledby="nameHeading">
+          <h1 id="nameHeading">Bushra Firdous</h1>
+          <h2>
+            Senior Software Engineer — Full-Stack Systems, Data Engineering &
+            Scalable Architectures
+          </h2>
 
-    <!-- EXPERIENCE -->
-    <section class="section">
-      <h2>Professional Experience</h2>
+          <p class="lead">
+            I design and deliver resilient backend systems, large-scale ETL/data
+            pipelines, and healthcare integrations with emphasis on correctness,
+            auditability, and cost efficiency.
+          </p>
 
-      <h3>Senior Software Developer – Hesten Solutions (Jan 2025 – Present)</h3>
-      <ul>
-        <li>
-          Developed a Python-based DICOM Receiver for real-time medical imaging
-          data ingestion.
-        </li>
-        <li>
-          Built a Laravel-based web system for managing, visualizing, and
-          reporting diagnostic data.
-        </li>
-        <li>
-          Implemented secure authentication, role-based access control, and
-          scalable architecture.
-        </li>
-        <li>
-          Integrated healthcare imaging equipment with hospital information
-          systems.
-        </li>
-      </ul>
+          <div class="meta">
+            8+ years • Nagpur, India • Open to Remote, Hyderabad, UAE
+          </div>
 
-      <h3>
-        Senior Software Developer – Great Place IT Services (Apr 2021 – Jul
-        2024)
-      </h3>
-      <ul>
-        <li>
-          Worked on B2B survey and culture audit platforms for Great Place to
-          Work (GPTW).
-        </li>
-        <li>
-          Developed reporting systems using CakePHP, Laravel, REST APIs, and
-          MySQL.
-        </li>
-        <li>
-          Contributed to QaizenX experience management platform using Next.js
-          and TypeScript.
-        </li>
-      </ul>
+          <div class="buttons" role="region" aria-label="Primary actions">
+            <!-- <a
+              class="btn primary"
+              href="/resume.pdf"
+              aria-label="Download CV (PDF)"
+              target="_blank"
+              rel="noopener"
+              >Download CV (PDF)</a
+            > -->
+            <a class="btn" href="#contact">Contact</a>
+            <a
+              class="btn"
+              href="https://github.com/gbushrarameez-lang"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+            <a
+              class="btn"
+              href="https://www.linkedin.com/in/bushra-firdous-9a1539108/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+          </div>
+        </section>
 
-      <h3>Software Developer – E-Whiz Solutions (Jul 2016 – Jun 2018)</h3>
-      <ul>
-        <li>
-          Developed CRM, HRMS, and accounting systems using Core PHP and
-          CodeIgniter.
-        </li>
-        <li>
-          Worked on cloud-based applications with dashboards and analytics.
-        </li>
-      </ul>
-    </section>
+        <section id="summary" aria-labelledby="summaryHeading">
+          <h3 id="summaryHeading">Professional Summary</h3>
+          <div class="card">
+            <p style="color: var(--muted); font-size: 14px; margin: 0">
+              I am a results-driven Senior Software Engineer with 8+ years of
+              experience designing and delivering backend systems, large-scale
+              ETL pipelines, and healthcare integrations with a focus on
+              correctness, provenance, and cost efficiency. I bring deep
+              hands-on expertise in PHP (Laravel), Python for data processing,
+              MySQL data modeling, and building RESTful APIs — coupled with
+              practical experience in Parquet/S3 storage, streaming/batch
+              ingestion, and third-party integrations. I excel at converting
+              ambiguous business needs into deterministic, testable
+              architectures, and have led projects that solved complex
+              normalization and large-file ingestion problems for enterprise and
+              healthcare domains. Strong collaborator and client-facing
+              technologist, comfortable leading development in Agile teams,
+              managing CI/CD workflows, and driving operational reliability in
+              cloud environments.
+            </p>
+          </div>
+        </section>
 
-    <!-- EDUCATION -->
-    <section class="section">
-      <h2>Education</h2>
-      <ul>
-        <li>
-          M.Tech in Electronics & Communications – RTM Nagpur University (2016)
-        </li>
-        <li>
-          B.E. in Electronics & Telecommunications – RTM Nagpur University
-          (2014)
-        </li>
-        <li>
-          Diploma in Electronics & Telecommunications – RTM Nagpur University
-          (2011)
-        </li>
-        <li>
-          PG Certificate in Cyber Security Management & Data Science – IIM
-          Nagpur (Pursuing)
-        </li>
-      </ul>
-    </section>
+        <section aria-labelledby="skillsTitle">
+          <h2 id="skillsTitle" class="section-title">Core Technical Skills</h2>
 
-    <!-- CERTIFICATIONS -->
-    <section class="section">
-      <h2>Certifications & Awards</h2>
-      <ul>
-        <li>PHP Certification – Xceller IT & Learning Solutions</li>
-        <li>Key Contributor Award – FY 2021–22</li>
-        <li>GPIT Annual Learning Conference Winner – 2022 & 2023</li>
-      </ul>
-    </section>
+          <div class="card">
+            <div class="skills-grid">
+              <!-- LEFT COLUMN -->
+              <div>
+                <!-- PHP -->
+                <div class="skill-row">
+                  <div class="label">PHP</div>
+                  <div class="years">8 yrs</div>
+                </div>
+                <div class="bar">
+                  <span
+                    role="progressbar"
+                    aria-valuenow="95"
+                    data-pct="95"
+                  ></span>
+                </div>
+                <div class="gap"></div>
 
-    <!-- FOOTER -->
-    <footer class="section">
-      <p>
-        <em>
-          I certify that the information provided is accurate and complete to
-          the best of my knowledge.
-        </em>
-      </p>
-    </footer>
+                <!-- MySQL -->
+                <div class="skill-row">
+                  <div class="label">MySQL Database & Modeling</div>
+                  <div class="years">8 yrs</div>
+                </div>
+                <div class="bar">
+                  <span
+                    role="progressbar"
+                    aria-valuenow="92"
+                    data-pct="92"
+                  ></span>
+                </div>
+                <div class="gap"></div>
+
+                <!-- JavaScript -->
+                <div class="skill-row">
+                  <div class="label">JavaScript</div>
+                  <div class="years">8 yrs</div>
+                </div>
+                <div class="bar">
+                  <span
+                    role="progressbar"
+                    aria-valuenow="90"
+                    data-pct="90"
+                  ></span>
+                </div>
+                <div class="gap"></div>
+
+                <!-- Laravel -->
+                <div class="skill-row">
+                  <div class="label">Laravel</div>
+                  <div class="years">4 yrs</div>
+                </div>
+                <div class="bar">
+                  <span
+                    role="progressbar"
+                    aria-valuenow="85"
+                    data-pct="85"
+                  ></span>
+                </div>
+                <div class="gap"></div>
+
+                <!-- CakePHP -->
+                <div class="skill-row">
+                  <div class="label">CakePHP</div>
+                  <div class="years">7 yrs</div>
+                </div>
+                <div class="bar">
+                  <span
+                    role="progressbar"
+                    aria-valuenow="88"
+                    data-pct="88"
+                  ></span>
+                </div>
+                <div class="gap"></div>
+
+                <!-- MVC -->
+                <div class="skill-row">
+                  <div class="label">MVC Frameworks</div>
+                  <div class="years">8 yrs</div>
+                </div>
+                <div class="bar">
+                  <span
+                    role="progressbar"
+                    aria-valuenow="92"
+                    data-pct="92"
+                  ></span>
+                </div>
+              </div>
+
+              <!-- RIGHT COLUMN -->
+              <div>
+                <!-- REST API -->
+                <div class="skill-row">
+                  <div class="label">RESTful APIs</div>
+                  <div class="years">8 yrs</div>
+                </div>
+                <div class="bar">
+                  <span
+                    role="progressbar"
+                    aria-valuenow="91"
+                    data-pct="91"
+                  ></span>
+                </div>
+                <div class="gap"></div>
+
+                <!-- OOP -->
+                <div class="skill-row">
+                  <div class="label">Object-Oriented Programming (OOP)</div>
+                  <div class="years">7 yrs</div>
+                </div>
+                <div class="bar">
+                  <span
+                    role="progressbar"
+                    aria-valuenow="89"
+                    data-pct="89"
+                  ></span>
+                </div>
+                <div class="gap"></div>
+
+                <!-- HTML / CSS -->
+                <div class="skill-row">
+                  <div class="label">HTML & CSS</div>
+                  <div class="years">8 yrs</div>
+                </div>
+                <div class="bar">
+                  <span
+                    role="progressbar"
+                    aria-valuenow="90"
+                    data-pct="90"
+                  ></span>
+                </div>
+                <div class="gap"></div>
+
+                <!-- jQuery -->
+                <div class="skill-row">
+                  <div class="label">jQuery</div>
+                  <div class="years">8 yrs</div>
+                </div>
+                <div class="bar">
+                  <span
+                    role="progressbar"
+                    aria-valuenow="88"
+                    data-pct="88"
+                  ></span>
+                </div>
+                <div class="gap"></div>
+
+                <!-- Git -->
+                <div class="skill-row">
+                  <div class="label">Git (Version Control)</div>
+                  <div class="years">8 yrs</div>
+                </div>
+                <div class="bar">
+                  <span
+                    role="progressbar"
+                    aria-valuenow="90"
+                    data-pct="90"
+                  ></span>
+                </div>
+                <div class="gap"></div>
+
+                <!-- Python -->
+                <div class="skill-row">
+                  <div class="label">Python</div>
+                  <div class="years">1 yr</div>
+                </div>
+                <div class="bar">
+                  <span
+                    role="progressbar"
+                    aria-valuenow="70"
+                    data-pct="70"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="tools" aria-labelledby="toolsHeading">
+          <h3 id="toolsHeading">Systems & Tools Capability</h3>
+
+          <div class="grid">
+            <div class="card">
+              <strong>Development & Version Control</strong>
+              <div class="meta-line">Git, SVN, VS Code, Sublime Merge</div>
+            </div>
+
+            <div class="card">
+              <strong>Project & Delivery</strong>
+              <div class="meta-line">
+                Jira, Agile / Sprint Planning, Ticket Handling
+              </div>
+            </div>
+
+            <div class="card">
+              <strong>Infrastructure & Operations</strong>
+              <div class="meta-line">
+                Hosting & Servers, Email Systems, Cron Jobs, CI/CD Basics
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="strengths" aria-labelledby="strengthsHeading">
+          <h3 id="strengthsHeading">Core Strengths</h3>
+          <div class="grid" style="align-items: start">
+            <div class="card">
+              <strong>Backend & APIs</strong>
+              <div class="meta-line">
+                Laravel, RESTful design, authentication, background workers,
+                queues
+              </div>
+            </div>
+            <div class="card">
+              <strong>Data & ETL</strong>
+              <div class="meta-line">
+                Python ETL, streaming/parquet, provenance, schema
+                canonicalization
+              </div>
+            </div>
+            <div class="card">
+              <strong>Healthcare</strong>
+              <div class="meta-line">
+                DICOM, hospital pricing MRFs, privacy & auditability
+              </div>
+            </div>
+            <div class="card">
+              <strong>Architecture</strong>
+              <div class="meta-line">
+                Scaling, cost optimisation, observability, reliability
+                engineering
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Case study (MidCost) -->
+        <section aria-labelledby="caseMidcost">
+          <h2 id="caseMidcost" class="section-title">
+            Case study — MidCost (Hospital Price Transparency)
+          </h2>
+
+          <article class="card" role="region" aria-label="MidCost case study">
+            <div class="project-meta meta-line">
+              Hesten Solutions · 2025 — Present
+            </div>
+
+            <p style="margin-top: 8px; color: var(--muted); font-size: 14px">
+              <strong>Overview:</strong> MidCost ingests nationwide hospital
+              price-transparency MRF files, normalizes inconsistent pricing rows
+              and serves high-performance, comparable procedure-level price
+              search across hospitals, payers and plans.
+            </p>
+
+            <h3 style="margin-top: 12px">Problem</h3>
+            <ul style="margin-top: 6px; color: var(--muted); font-size: 14px">
+              <li>
+                Files differ widely in schema and structure; large (GB+ per
+                hospital).
+              </li>
+              <li>
+                Ambiguous payer/plan/procedure mappings; relational-only
+                solutions are cost-inefficient at national scale.
+              </li>
+            </ul>
+
+            <h3 style="margin-top: 12px">
+              High-level architecture &amp; data flow
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                margin-top: 8px;
+              "
+            >
+              <div class="principle" style="padding: 10px">
+                <strong>Layer 0 — Lossless Staging</strong>
+                <div class="meta-line" style="margin-top: 6px">
+                  Explode raw files, preserve payload, file hash, URL and
+                  row-level errors.
+                </div>
+              </div>
+              <div class="principle" style="padding: 10px">
+                <strong>Layer 1 — Canonical Atomic Prices</strong>
+                <div class="meta-line" style="margin-top: 6px">
+                  Normalize to atomic model: hospital × service × payer × plan ×
+                  price-type.
+                </div>
+              </div>
+              <div class="principle" style="padding: 10px">
+                <strong>Layer 2 — Aggregated &amp; Serving</strong>
+                <div class="meta-line" style="margin-top: 6px">
+                  Aggregations (min/median/max); Parquet outputs and
+                  search-optimized serving (embeddings + filters).
+                </div>
+              </div>
+              <div class="principle" style="padding: 10px">
+                <strong>Storage</strong>
+                <div class="meta-line" style="margin-top: 6px">
+                  Parquet on S3-compatible object storage; MySQL for canonical
+                  transactional indexes.
+                </div>
+              </div>
+            </div>
+
+            <h3 style="margin-top: 12px">Impact snapshot</h3>
+            <ul style="margin-top: 6px; color: var(--muted); font-size: 14px">
+              <li>5,400+ hospitals ingested (MidCost production)</li>
+              <li>Multi-TB canonical datasets (Parquet)</li>
+              <li>Sub-second search for common queries</li>
+              <li>
+                ≈90% archival storage cost reduction using Parquet + object
+                storage
+              </li>
+            </ul>
+
+            <h3 style="margin-top: 12px">Technical components</h3>
+            <ul class="meta-line">
+              <li>
+                Python ETL (streaming &amp; batch), SQLAlchemy, custom
+                CSV/JSON/ZIP parsers.
+              </li>
+              <li>
+                Deterministic canonicalization engine; payer-plan resolution and
+                deduplication.
+              </li>
+              <li>
+                Parquet writer + partitioning strategy; S3-compatible object
+                store for scale.
+              </li>
+              <li>
+                Embedding-based search for service description matching and
+                ranking.
+              </li>
+            </ul>
+
+            <div
+              style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px"
+            >
+              <span class="tag">Python</span><span class="tag">MySQL</span
+              ><span class="tag">Parquet</span><span class="tag">S3</span
+              ><span class="tag">Vector search</span>
+            </div>
+          </article>
+        </section>
+
+        <section id="projects" aria-labelledby="projectsHeading">
+          <h3 id="projectsHeading">Projects</h3>
+
+          <div class="filters" role="toolbar" aria-label="Project filters">
+            <button
+              class="filter-btn active"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              All
+            </button>
+            <button class="filter-btn" data-filter="healthcare">
+              Healthcare
+            </button>
+            <button class="filter-btn" data-filter="data">
+              Data Engineering
+            </button>
+            <button class="filter-btn" data-filter="enterprise">
+              Enterprise SaaS
+            </button>
+          </div>
+
+          <div class="grid" id="projectGrid">
+            <!-- MidCost -->
+            <article
+              class="card project"
+              data-category="healthcare data"
+              role="article"
+              aria-label="MidCost — Hospital Price Transparency & Search Platform"
+            >
+              <h4>MidCost — Hospital Price Transparency & Search Platform</h4>
+              <div class="meta-line">
+                <strong>Company:</strong> Hesten Solutions •
+                <strong>Duration:</strong> 2025 – Present
+              </div>
+              <p class="preview">
+                Nationwide healthcare data platform ingesting and normalizing
+                U.S. hospital price transparency MRF files at national scale.
+              </p>
+
+              <div class="details" aria-hidden="true">
+                <p>
+                  MidCost ingests gigabyte-scale machine-readable files (MRFs)
+                  published by U.S. hospitals, normalizes highly inconsistent
+                  schemas, and preserves full provenance for auditability.<br /><br />
+                  A multi-layer canonical ETL pipeline stores raw payloads, file
+                  hashes, validation errors, and metadata before resolving data
+                  into an atomic pricing model (hospital × service × payer ×
+                  plan × price-type).<br /><br />
+                  Canonical data is exported to Parquet on object storage and
+                  served through a search-optimized layer enabling sub-second
+                  price discovery nationwide.
+                </p>
+              </div>
+
+              <button class="toggle-btn" aria-expanded="false">
+                View Details
+              </button>
+            </article>
+
+            <!-- Diagnostic Centre -->
+            <article
+              class="card project"
+              data-category="healthcare"
+              role="article"
+              aria-label="Diagnostic Centre Platform — DICOM Receiver & Clinical Dashboard"
+            >
+              <h4>
+                Diagnostic Centre Platform — DICOM Receiver & Clinical Dashboard
+              </h4>
+              <div class="meta-line">
+                <strong>Company:</strong> Hesten Solutions •
+                <strong>Duration:</strong> Jan 2025 – Present
+              </div>
+              <p class="preview">
+                End-to-end diagnostic imaging ingestion platform integrating
+                DICOM hardware with a clinician-facing web dashboard.
+              </p>
+
+              <div class="details" aria-hidden="true">
+                <p>
+                  A Python-based, Windows-installable DICOM receiver captures
+                  real-time imaging data from DICOM-compatible modalities,
+                  validates and parses studies, and securely stores imaging
+                  metadata with healthcare-grade traceability.<br /><br />
+                  A Laravel-based application provides role-based dashboards,
+                  patient and study management, advanced search, filtering, and
+                  reporting—significantly reducing diagnostic turnaround time.
+                </p>
+              </div>
+
+              <button class="toggle-btn" aria-expanded="false">
+                View Details
+              </button>
+            </article>
+
+            <!-- India List / CA / CAE -->
+            <article
+              class="card project"
+              data-category="enterprise"
+              role="article"
+              aria-label="India List / CA / CAE — Survey & Culture Audit Platforms"
+            >
+              <h4>India List / CA / CAE — Survey & Culture Audit Platforms</h4>
+              <div class="meta-line">
+                <strong>Company:</strong> Great Place IT Services (GPIT) •
+                <strong>Client:</strong> Great Place to Work (GPTW) •
+                <strong>Duration:</strong> Apr 2021 – Jul 2024
+              </div>
+              <p class="preview">
+                B2B platforms supporting large-scale employee surveys and
+                culture audit programs for enterprises across India.
+              </p>
+
+              <div class="details" aria-hidden="true">
+                <p>
+                  The platforms enable organization onboarding, configurable
+                  survey workflows, scoring logic, and automated culture audit
+                  report generation.<br /><br />
+                  Built using CakePHP, Laravel, MySQL, and REST services, the
+                  systems handled high-volume survey responses with strong
+                  validation, data integrity, and reporting pipelines tailored
+                  to client requirements.
+                </p>
+              </div>
+
+              <button class="toggle-btn" aria-expanded="false">
+                View Details
+              </button>
+            </article>
+
+            <!-- QaizenX -->
+            <article
+              class="card project"
+              data-category="enterprise"
+              role="article"
+              aria-label="QaizenX — Enterprise Experience Management Platform"
+            >
+              <h4>QaizenX — Enterprise Experience Management Platform</h4>
+              <div class="meta-line">
+                <strong>Company:</strong> Great Place IT Services (GPIT) •
+                <strong>Duration:</strong> 2021 – 2024
+              </div>
+              <p class="preview">
+                Enterprise platform for collecting, analyzing, and
+                operationalizing feedback across employees, customers, and
+                communities.
+              </p>
+
+              <div class="details" aria-hidden="true">
+                <p>
+                  QaizenX supports multi-channel survey distribution via email,
+                  WhatsApp, SMS, and QR codes, combined with benchmarking and
+                  actionable analytics.<br /><br />
+                  Designed for scalability and reliability, the platform enables
+                  enterprises to drive continuous improvement through structured
+                  feedback loops and insight-driven decisions.
+                </p>
+              </div>
+
+              <button class="toggle-btn" aria-expanded="false">
+                View Details
+              </button>
+            </article>
+
+            <!-- TrustImpact -->
+            <article
+              class="card project"
+              data-category="enterprise"
+              role="article"
+              aria-label="TrustImpact — Survey Reporting & Action Planning Tool"
+            >
+              <h4>TrustImpact — Survey Reporting & Action Planning Tool</h4>
+              <div class="meta-line">
+                <strong>Company:</strong> Great Place IT Services (GPIT) •
+                <strong>Duration:</strong> Jun 2018 – Apr 2019
+              </div>
+              <p class="preview">
+                Survey reporting tool converting employee feedback into
+                structured, trackable improvement action plans.
+              </p>
+
+              <div class="details" aria-hidden="true">
+                <p>
+                  Managers analyze survey outcomes, define targeted improvement
+                  actions, and validate effectiveness through follow-up
+                  micro-surveys.<br /><br />
+                  Built using Laravel and AngularJS, the platform emphasizes
+                  clarity of insights, ease of interpretation, and measurable
+                  cultural improvement.
+                </p>
+              </div>
+
+              <button class="toggle-btn" aria-expanded="false">
+                View Details
+              </button>
+            </article>
+
+            <!-- Whiz Sales -->
+            <article
+              class="card project"
+              data-category="enterprise"
+              role="article"
+              aria-label="Whiz Sales — CRM, Accounting & HRMS Suite"
+            >
+              <h4>Whiz Sales — CRM, Accounting & HRMS Suite</h4>
+              <div class="meta-line">
+                <strong>Company:</strong> E-Whiz Solutions Pvt. Ltd. •
+                <strong>Duration:</strong> Jul 2016 – Jun 2018
+              </div>
+              <p class="preview">
+                Cloud-based business management suite replacing fragmented CRM,
+                accounting, and HR workflows for SMEs.
+              </p>
+
+              <div class="details" aria-hidden="true">
+                <p>
+                  The CRM module supports lead tracking and sales pipeline
+                  analytics, while accounting and HRMS modules manage financial
+                  operations and employee lifecycle processes.<br /><br />
+                  The platform centralized real-time business data, improving
+                  operational efficiency and decision-making.
+                </p>
+              </div>
+
+              <button class="toggle-btn" aria-expanded="false">
+                View Details
+              </button>
+            </article>
+
+            <!-- Rayon Lighting -->
+            <article
+              class="card project"
+              data-category="enterprise"
+              role="article"
+              aria-label="Rayon Lighting — Corporate Website & Integrations"
+            >
+              <h4>Rayon Lighting — Corporate Website & Integrations</h4>
+              <div class="meta-line">
+                <strong>Company:</strong> Xceller IT & Learning Solutions Pvt.
+                Ltd. • <strong>Duration:</strong> Sep 2015 – Mar 2016
+              </div>
+              <p class="preview">
+                Corporate WordPress website development with custom themes,
+                plugins, and third-party integrations.
+              </p>
+
+              <div class="details" aria-hidden="true">
+                <p>
+                  Responsibilities included custom WordPress development,
+                  performance optimization, hosting and uptime monitoring, and
+                  cross-browser/device compatibility.<br /><br />
+                  The project ensured scalable content management and consistent
+                  user experience across platforms.
+                </p>
+              </div>
+
+              <button class="toggle-btn" aria-expanded="false">
+                View Details
+              </button>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contactHeading">
+          <h3 id="contactHeading">Contact & Availability</h3>
+          <div class="card">
+            <p style="color: var(--muted); font-size: 14px; margin: 6px 0">
+              <strong>Email:</strong> g.bushrarameez@gmail.com
+            </p>
+            <p style="color: var(--muted); font-size: 14px; margin: 6px 0">
+              <strong>Phone:</strong> +91 73875 77720
+            </p>
+            <p style="color: var(--muted); font-size: 14px; margin: 6px 0">
+              <strong>Location:</strong> Nagpur, India
+            </p>
+            <p style="color: var(--muted); font-size: 14px; margin: 6px 0">
+              <strong>Open to:</strong> Senior Backend, Data Engineering,
+              Healthcare roles
+            </p>
+            <div style="margin-top: 8px">
+              <a class="btn" href="mailto:g.bushrarameez@gmail.com">Email</a>
+              <a class="btn" href="/resume.pdf" target="_blank" rel="noopener"
+                >Download CV</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <section id="more" aria-labelledby="moreHeading">
+          <h3 id="moreHeading">Education & Certifications</h3>
+          <div class="grid">
+            <div class="card">
+              <strong>Education</strong>
+              <div class="meta-line" style="margin-top: 6px">
+                Master of Technology (M.Tech) — Electronics & Communications
+                (2016)<br />
+                Bachelor of Engineering (B.E.) — Electronics & Telecommunication
+                (2014)<br />
+                Diploma — Electronics & Telecommunication (2011)<br />
+                Rashtrasant Tukadoji Maharaj University, Nagpur
+              </div>
+            </div>
+
+            <div class="card">
+              <strong>Certifications</strong>
+              <div class="meta-line" style="margin-top: 6px">
+                Certification in PHP — Xceller IT & Learning Solutions Pvt.
+                Ltd., Nagpur (2015)<br />
+                Post Graduate Certificate Programme in Cyber Security Management
+                & Data Science — IIM Nagpur (Pursuing)
+              </div>
+            </div>
+
+            <div class="card">
+              <strong>Awards & Recognition</strong>
+              <div class="meta-line" style="margin-top: 6px">
+                Key Contributor Award (FY 2021–22)<br />
+                Led winning teams at GPIT Annual Learning Conference (2022,
+                2023)
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>© Bushra Firdous</footer>
+    </div>
+
+    <script>
+      // Consolidated, accessible JS:
+      (function () {
+        // Toggle project details
+        function toggleCard(btn) {
+          const card = btn.closest(".card");
+          const details = card.querySelector(".details");
+          const isOpen = card.classList.toggle("open");
+          btn.setAttribute("aria-expanded", String(isOpen));
+          if (details) details.setAttribute("aria-hidden", String(!isOpen));
+          btn.textContent = isOpen ? "Hide Details" : "View Details";
+          btn.focus();
+        }
+
+        document.querySelectorAll(".toggle-btn").forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            toggleCard(e.currentTarget);
+          });
+          // keyboard activation
+          btn.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              toggleCard(e.currentTarget);
+            }
+          });
+        });
+
+        // Filters
+        document.querySelectorAll(".filter-btn").forEach((btn) => {
+          btn.addEventListener("click", (ev) => {
+            const target = ev.currentTarget;
+            const filter = target.dataset.filter;
+            // active state
+            document.querySelectorAll(".filter-btn").forEach((b) => {
+              b.classList.remove("active");
+              b.setAttribute("aria-pressed", "false");
+            });
+            target.classList.add("active");
+            target.setAttribute("aria-pressed", "true");
+            // show/hide
+            document.querySelectorAll(".project").forEach((p) => {
+              const cats = (p.dataset.category || "").toLowerCase();
+              const show = filter === "all" || cats.includes(filter);
+              p.style.display = show ? "" : "none";
+            });
+          });
+        });
+
+        // Close open projects when clicking outside
+        document.addEventListener("click", function (e) {
+          if (e.target.closest(".card")) return;
+          document.querySelectorAll(".card.open").forEach((card) => {
+            card.classList.remove("open");
+            const btn = card.querySelector(".toggle-btn");
+            if (btn) {
+              btn.setAttribute("aria-expanded", "false");
+              btn.textContent = "View Details";
+            }
+            const details = card.querySelector(".details");
+            if (details) details.setAttribute("aria-hidden", "true");
+          });
+        });
+
+        // Simple typewriter in header
+        const typeLine = document.getElementById("typeLine");
+        const lines = [
+          'const name = "Bushra Firdous";',
+          'const role = "Senior Software Engineer";',
+          'const stack = ["PHP","Laravel","Python","MySQL","ETL"];',
+          "// building scalable backend & data platforms",
+        ];
+        let li = 0,
+          ci = 0,
+          forward = true;
+        function typeLoop() {
+          const line = lines[li];
+          if (forward) {
+            ci++;
+            typeLine.textContent = line.slice(0, ci);
+            if (ci === line.length) {
+              forward = false;
+              setTimeout(typeLoop, 900);
+              return;
+            }
+          } else {
+            ci--;
+            typeLine.textContent = line.slice(0, ci);
+            if (ci === 0) {
+              forward = true;
+              li = (li + 1) % lines.length;
+            }
+          }
+          setTimeout(typeLoop, forward ? 45 : 30);
+        }
+        setTimeout(typeLoop, 400);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((a) => {
+          a.addEventListener("click", function (e) {
+            const href = a.getAttribute("href");
+            if (href.length > 1) {
+              e.preventDefault();
+              const el = document.querySelector(href);
+              if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          });
+        });
+      })();
+
+      document.querySelectorAll(".bar span").forEach((el) => {
+        const pct = el.dataset.pct;
+        el.style.width = pct + "%";
+      });
+    </script>
   </body>
 </html>
